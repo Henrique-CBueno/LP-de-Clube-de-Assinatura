@@ -31,8 +31,17 @@
     --title-sm: 700 2rem "Raleway", sans-serif;
     --title-xs: 700 1rem "Raleway", sans-serif;
 
+    --body-lg: 400 1.25rem/140% "Raleway", sans-serif;
+    --body-md: 400 1rem/140% "Raleway", sans-serif;
+    --body-sm: 400 .875rem/140% "Raleway", sans-serif;
+    --body-xs: 400 .75rem/140% "Raleway", sans-serif;
+
     --subtitle: 500 2rem/200% "Raleway", sans-serif;
     --button: 700 .875rem "Raleway", sans-serif;
     --link: 500 .875rem "Raleway", sans-serif;
     --tag: 700 .625rem "Raleway", sans-serif;
+}
+
+html{
+    zoom: .5;
 }
