@@ -6,10 +6,13 @@ section.sec1 {
     background-size: contain;
 
    background-repeat: no-repeat;
+
+   animation: appear ease 1.5s both;
+
   
+   
     
     header{
-        z-index: 1;
         padding-top: 3.5rem;
         display: flex;
         justify-content: space-around;
@@ -56,4 +59,66 @@ section.sec1 {
             font: var(--body-lg);
         }
     }
+
+    .under{
+        animation: appear-scr ease;
+        animation-timeline: view();
+        animation-range: entry 0;
+        height: 100%;
+        width: 100%;
+        padding-top: 6rem;
+        padding: 7.5rem;
+        display: grid;
+        
+        img:nth-child(1){
+            justify-self: center;
+            
+        }
+
+        h2{
+            font: var(--subtitle);
+            text-align: center;
+            color: var(--text-body);
+
+            span{
+                color: var(--blue-light);
+            }
+        }
+
+        .books{
+            animation: appear ease;
+            animation-timeline: view();
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+    }
+}
+
+
+
+
+@keyframes appear-scr {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+    
 }
