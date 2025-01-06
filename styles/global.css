@@ -45,3 +45,7 @@
 html{
     zoom: .5;
 }
+
+body{
+    background: linear-gradient(90deg, rgba(36,0,33,1) 0%, rgba(67,9,121,1) 39%, rgba(103,7,156,1) 50%, rgba(89,5,178,1) 57%, rgba(154,3,204,1) 65%, rgba(205,0,255,1) 81%);
+}
