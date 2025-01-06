@@ -17,26 +17,51 @@ section.sec1 {
         display: flex;
         justify-content: space-around;
         align-items: center;
+
         img{
             width: 14.375rem;
             height: 3.625rem;
         }
         
-        a{
-            text-decoration: none;
-            
-            h3{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: .5rem;
-                width: 5.625rem;
-                height: 2.5rem;
-                background-color: var(--pink-dark);
-                color: var(--text-title);
-                font: var(--button);
-            }
-        }
+        button {
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: .5rem;
+            width: 5.625rem;
+            height: 2.5rem;
+            background-color: var(--pink-dark);
+            position: relative; /* Adiciona um contexto de posicionamento para a animação */
+            overflow: hidden; /* Garante que a animação não ultrapasse os limites do botão */
+            transition: background 0.3s ease;
+          }
+          
+          button h3 {
+            color: var(--text-title);
+            font: var(--button);
+            position: relative; /* Faz com que o texto fique acima da animação */
+            z-index: 2; /* Garante que o texto esteja por cima da animação */
+          }
+          
+          button::before {
+            content: "";
+            background-color: var(--pink-base);
+            height: 100%;
+            width: 200%;
+            position: absolute; /* Permite que a animação ocupe toda a área do botão */
+            top: 0;
+            left: -50%;
+            border-radius: inherit;
+            clip-path: circle(0%);
+            transition: clip-path 500ms ease-in-out;
+            z-index: 1; /* A animação ficará abaixo do texto */
+          }
+          
+          button:hover::before {
+            clip-path: circle(150%);
+          }
     }
 
     .title{
