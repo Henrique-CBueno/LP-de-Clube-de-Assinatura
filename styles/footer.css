@@ -1,0 +1,124 @@
+section.footer {
+    margin-top: 60rem; /* Ou ajuste conforme necessário */
+    background-image: url(../assets/images/book-trace-background.png);
+    background-size: contain; /* Ou use cover, dependendo da necessidade */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 57vw;
+    overflow: hidden;
+    width: 100%; /* Para garantir que a largura seja 100% do contêiner */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .social{
+        display: grid;
+        place-items: center;
+
+        width: 19%;
+        
+        gap: 0.75rem;
+
+      
+        
+        .underline{
+            
+            width: 100%;
+            height: 1px;
+            background-color: var(--shape-stroke);
+        }
+
+        .medias{
+            display: flex;
+            align-items: center;
+            gap: 1.3rem;
+
+
+
+                .media {
+                    position: relative; /* Cria um contexto de empilhamento */
+                    width: 40px; /* Defina o tamanho do contêiner */
+                    height: 40px; /* Defina o tamanho do contêiner */
+                    cursor: pointer;
+
+                    svg path{
+                        
+                        transition: fill 0.3s 0.3s ease, transform 0.3s ease
+
+                    }
+
+                    .circle{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 50px; /* Tamanho do círculo */
+                        height: 50px;
+                        background-color: var(--shape-stroke);
+                        clip-path: circle(00%);
+                        transition: all .5s ease;
+                    }
+
+                    &:hover{
+                        svg path{
+                            fill: var(--text-body);
+                            transform: scale(.8) translate(13%, 13%);
+                        }
+                        .circle{
+                            clip-path: circle(50%);
+                        }
+                    }
+                  }
+                  
+                 
+
+                  
+                  svg {
+                    position: relative;
+                    z-index: 1; /* Mantém o SVG acima do círculo */
+                    width: 40px; /* Ajuste do tamanho do ícone SVG */
+                    height: 40px;
+                  }
+                
+
+            
+        }
+    }
+
+    .info{
+        display: flex;
+        gap: 7rem;
+
+        .content,
+        .help{
+            display: grid;
+            gap: 1.75rem;
+
+
+            h1{
+                margin-bottom: .5rem;
+                font: var(--title-xs);
+                font-size: 1.425rem;
+                color: var(--text-body);
+            }
+
+
+            a{
+                text-decoration: none;
+                h2{
+                    font: var(--link);
+                    color: var(--blue-light);
+                    font-size: 1.3rem;
+                    transition: all .3s ease;
+                }
+
+               &:hover{
+                h2{
+                    color: var(--text-body);
+                }
+               }
+            }
+        }
+    }
+}
