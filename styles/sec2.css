@@ -49,6 +49,9 @@ section.sec2{
         height: 100%;
         position: relative;
         transition: all ease 3s both ;
+        
+        padding-bottom: 77rem;
+        /*Para a pag ficar ate depois do hover*/
 
         .arrow-book,
         .bookmark,
